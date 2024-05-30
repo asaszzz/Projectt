@@ -1,0 +1,13 @@
+import java.io.File
+
+fun main() {
+    val filePath = "text.txt"
+    val file = File(filePath)
+    if (file.exists()) {
+        file.forEachLine { line ->
+            println(line)
+        }
+    } else {
+        println("file ne naiden: $filePath")
+    }
+}
